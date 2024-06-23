@@ -9,6 +9,9 @@ int findUniqueElement(int arr[], int n) {
     return element;  // Return the result
 }
 
+//unique no of occurance
+//two time occurance no
+
 int main() {
     int n = 7;  
     int arr[n] = {1, 1, 5, 5, 3, 3, 7};  
