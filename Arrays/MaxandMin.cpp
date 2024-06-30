@@ -22,24 +22,32 @@ int max(int arr[], int n)
     return max;
 }
 
-int min(int arr[], int n)
+int min(int prices[], int n)
 {
-    int min = INT8_MAX;
+    int min = 100;
+    int max = 0;
     for (int i = 0; i < n; i++)
     {
-        if (min > arr[i])
+        if (prices[i] < min)
         {
-            min = arr[i];
+            min = prices[i];
+
+        cout<<min<<"";
+        }
+        else if (prices[i] > max)
+        {
+            max = prices[i];
         }
     }
-    return min;
+
+    return max - min;
 }
 
 int main()
 {
-    int n = 4;
-    int arr[n] = {1, 10, 5, 4, 5};
-    cout << "Maximum value is:" << max(arr, n) << endl;
+    int n = 5;
+    int arr[n] = {7,6,4,3,1};
+    // cout << "Maximum value is:" << max(arr, n) << endl;
     cout << "minimum value is:" << min(arr, n);
 
     return 0;
